@@ -1,0 +1,4 @@
+steps:
+  - name: 'docker/compose'
+    id: 'compose-up'
+    args: [ '-f', 'docker-compose.ci.yml', 'up', '--build', '--abort-on-container-exit']
