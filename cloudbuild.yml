@@ -1,0 +1,14 @@
+steps:
+  - name: 'docker/compose'
+    id: 'compose-up'
+    args: [ '-f', 'docker-compose.ci.yml', 'up', '-d' ]
+  - name: 'golang'
+    id: 'go-test'
+    entrypoint: 'bash'
+    args:
+      - -c
+      - |
+        go test -v .
+  - name: 'docker/compose'
+    id: 'compose-down'
+    args: [ '-f', 'docker-compose.ci.yml', 'down' ]
