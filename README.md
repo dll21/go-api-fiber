@@ -1,3 +1,3 @@
 # go-api-fiber
 
-Ejemplo test api go + docker-compose + cloudbuild
+Ejemplo test api go + docker-compose + cloudbuild + testing
